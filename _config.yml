@@ -31,6 +31,11 @@ github_username:  fredwangwang
 # statistics
 revolvermaps: TODO
 
+# comment
+disqus:
+  enable: true
+  account_name: fredwanghuan # https://<account_name>.disqus.com
+
 # Build settings
 markdown: kramdown
 

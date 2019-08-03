@@ -33,7 +33,7 @@ revolvermaps: TODO
 
 # comment
 disqus:
-  enable: true
+  enable: false
   account_name: fredwanghuan # https://<account_name>.disqus.com
 
 # Build settings
@@ -44,6 +44,7 @@ markdown: kramdown
 # Exclude from processing.
 exclude:
   - README.md
+  - LICENSE
   - Gemfile
   - Gemfile.lock
   - node_modules
@@ -51,3 +52,5 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+permalink: /:year/:month/:day/:title

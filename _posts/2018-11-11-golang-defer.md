@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How does defer works"
-categories: golang language
+categories: golang
 tag: defer
 ---
 

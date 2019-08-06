@@ -53,4 +53,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-permalink: /:year/:month/:day/:title
+permalink: /:categories/:title

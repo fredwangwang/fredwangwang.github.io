@@ -1,4 +1,6 @@
 
+https://www.mpgh.net/forum/showthread.php?t=910257
+
 https://www.unknowncheats.me/forum/c-and-c-/231044-junk-code-generator.html
 
 

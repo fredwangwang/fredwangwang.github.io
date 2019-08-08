@@ -10,10 +10,10 @@ tag: dllinject
 
 
 When trying to get my copypasta CS:GO internal hacking to work, I need to figure out how
-to inject my freshly compiled DLL into the game process. Googling around and ppl says 
-manual ddl inject is better. Hmm, but how better? So I digged a bit further about the topic,
-and here is wat I learned. Before we touched on the manual dll inject, let's first see what
-is `Loadlibrary` and why that is not good enough.
+to inject my freshly compiled DLL into the game process. Googling around and ppl say 
+manual ddl inject is the better way of doing dll injection. Hmm, but how better? Compared with what?
+So I digged a bit further about the topic and here is wat I learned. Before we touched on the manual dll inject, let's first see what
+is `Loadlibrary`.
 
 ## Loadlibrary(A)
 Doing a google serch and the top result would probably be a link to the official windows
@@ -29,7 +29,7 @@ process and find out something potentially bad is there. Entering manual dll inj
 
 
 ## Manual DLL Inject
-Now we know  we want to inject a DLL into the target process, but sliently.
+Now we know we want to inject a DLL into the target process, but sliently.
 This is where we can use the manual DLL inject. As the name suggests, it will inject a DLL
 manually, bypassing the need to invoke `LoadLibrary`. The main benefit of doing this is of
 course not to register the DLL we load into the moudle list, making it harder to spot. But
@@ -45,17 +45,16 @@ entrypoint)
 5. excute the shellcode (in a new thread).
 
 
+## Conclusion
 Cool, so now we have some understanding of what is manual dll inject and why we need it in some
-cases, now we want to actually use it. I didn't bother to write a injector my own, but there
-are lots of injectors in github ranging from the most simple `LoadLibrary` ones to the more
-advanced with lots of load options. Here are two injectors that both employ the manual dll
-inject technique. Of course you can create your own, but those should be a pretty good starting
-point.
+cases, now we want to actually use it. There are lots of injectors you can find online, if you
+don't really want to write one your own. [GH injector](https://guidedhacking.com/resources/guided-hacking-dll-injector.4/)
+and [Xenos](https://github.com/DarthTon/Xenos) are two pretty famous ones. But of course, other
+injectors would work as well. Just be sure that you pay attention to whether the injector you
+use employs `LoadLibaray` or manual dll inject.
 
 
-## Injectors
-- [MemJect](https://github.com/danielkrupinski/MemJect)
-- [Xenos](https://github.com/DarthTon/Xenos)
+In the [next post]({% post_url 2019-08-05-dll-inject2 %}) I will walk through how to create a manual dll injector from sketch.
 
 
 ## Reference
